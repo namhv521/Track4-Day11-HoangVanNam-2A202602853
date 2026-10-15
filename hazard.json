@@ -1,0 +1,58 @@
+{
+ "format": "avsim-studio/1",
+ "params": {
+  "cutT0": 6.5,
+  "cutDur": 2.4,
+  "cutV": 15,
+  "pedT0": 11,
+  "pedV": 1.45,
+  "busGo": 17,
+  "cutDs": -4,
+  "tgT": 0.9,
+  "mu": 0.8,
+  "cutGap": 12,
+  "cutBrake": 0,
+  "pedGap": 4.5,
+  "pedLook": 1,
+  "civil": true
+ },
+ "policy": {},
+ "hazards": [
+  {
+   "x": 20,
+   "lane": "E2",
+   "d": -1,
+   "v": 3.5,
+   "swerve": 2.4,
+   "swDur": 2.3,
+   "t0": 0,
+   "trig": 10,
+   "type": "bike"
+  }
+ ],
+ "ego": "planner",
+ "space": {
+  "h0_x": [
+   0,
+   40
+  ],
+  "h0_v": [
+   3,
+   4
+  ],
+  "h0_swerve": [
+   2.2,
+   2.6
+  ],
+  "h0_swDur": [
+   2.2,
+   2.6
+  ],
+  "h0_trig": [
+   8,
+   14
+  ]
+ },
+ "exposure": 1,
+ "why": "Kịch bản dựng bằng chương 10: xe đạp tại x=20 m ở mép trái E2 (d=-1 m) lạng tránh chướng ngại sang E1, kích hoạt khi xe ta cách 10 m; trình xem báo va chạm tại 7.4 s. Chiến dịch kiểm thử tiêm đúng một rắc rối mỗi chuyến mô phỏng, nên exposure=1 theo thiết kế, không phải tần suất đường thật. Miền x=0..40 m nằm trên đoạn tiếp cận trước giao lộ x=80 m và vạch x=122 m; tránh vị trí các tác nhân tại khởi đầu. v=3..4 m/s (10.8..14.4 km/h) là dải kiểm thử xe đạp chậm; swerve=2.2..2.6 m đưa xe đạp từ vị trí cách tâm E1 2.5 m vào làn E1. swDur=2.2..2.6 s bảo đảm gia tốc ngang cực đại pi^2*2.6/(2*2.2^2)=2.651 m/s^2 dưới giới hạn 3 m/s^2 trong avsim/studio.py. trig=8..14 m quét vùng TTC khoảng 0.8..2 s với vận tốc tương đối 7..10 m/s, bao gồm điểm va chạm dựng được và điểm phanh an toàn. Đây là miền thử nghiệm có căn cứ hình học/vật lý; phân phối uniform là thiết kế thí nghiệm, không phải dữ liệu thực địa. Chưa có dữ liệu để suy ra exposure tự nhiên. Muốn so tần suất đường thật mỗi chuyến với bus_bypass phải đo số lần xe đạp lạng trong video hành trình trên tổng số chuyến cùng tuyến; không dùng exposure=1 này làm tần suất ngoài đời."
+}

@@ -1,0 +1,33 @@
+{
+ "format": "avsim-viewer/1",
+ "title": "MSSV 202602853 — bản sửa, bóng mờ baseline",
+ "policy": {
+  "cutinLat": 3.0
+ },
+ "baseline_policy": {},
+ "runs": [
+  {
+   "id": "B-01-fix",
+   "label": "bus_bypass",
+   "outcome": "safe",
+   "others": "reactive",
+   "policy": null,
+   "params": {
+    "cutT0": 10.042484846905394,
+    "cutDur": 4.042264590838475,
+    "cutV": 14.966216701867245,
+    "cutDs": 3.3568261628203757,
+    "pedT0": 11.590263738604735,
+    "pedV": 1.1728799312715896,
+    "busGo": 12.170323753160165,
+    "tgT": 0.617573506069754,
+    "cutGap": 6.963697461476106,
+    "pedGap": 2.304566277819288,
+    "mu": 0.5,
+    "pedLook": 0.0,
+    "cutBrake": 0.0,
+    "civil": true
+   }
+  }
+ ]
+}
